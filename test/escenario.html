@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Primero</h1>
+    <div id="mensajitos">
+        <click-toogle leyenda="Esto se va a ocultar"></click-toogle>
+        <ul>
+
+        </ul>
+
+        <hr />
+        <h1>Segundo</h1>
+        <div>
+            <click-toogle leyenda="Esto se va a ocultar"></click-toogle>
+        </div>
+
+        <hr />
+        <h1>Modal</h1>
+
+        <button class="open">Open</button>
+        <x-modal title="Mensaje de Confirmacion" visible>
+            <p>¿Esta seguro que desea Continuar?</p>
+        </x-modal>
+
+        <script>
+            modal = document.querySelector("x-modal");
+            modal.addEventListener("Cancelar", function () {
+                console.log("Cancelar evento");
+            });
+            modal.addEventListener("Ok", function () {
+                console.log("Ok al evento");
+            });
+
+            open = document.querySelector(".open");
+            open.addEventListener("click", function () {
+                modal.visible = true;
+            });
+        </script>
+
+        <hr />
+        <h1>Autocomplete</h1>
+
+        Text autocomplete:
+
+        <lit-autocomplete fulllist='[
+                      {"value": "1", "text":"hello" },
+                      {"value": "2", "text":"hi"},
+                      {"value": "3", "text":"How are you" },
+                      {"value": "4", "text":"My name is" }]'>
+            <input type="text" placeholder="search value" />
+            </nega-autocomplete>
+
+
+
+
+            <script async type="module" src="../js/boundary/components/Save.js"></script>
+            <script async type="module" src="../js/boundary/components/ClickToogle.js"></script>
+            <script async type="module" src="../js/boundary/components/Modal.js"></script>
+            <script async type="module" src="../js/boundary/components/autocomplete.js"></script>
+
+
+            <script async type="module">
+                document.querySelector("#mensajitos").addEventListener("eventoocultar", e => {
+                    console.log(e);
+                });
+
+            </script>
+</body>
+
+</html>
