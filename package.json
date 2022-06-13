@@ -2,7 +2,7 @@
     "name": "practica1",
     "version": "1.0.0",
     "description": "Prueba Pipeline Front",
-    "main": "index.js",
+    "main": "mocha.html",
     "scripts": {
       "start": "node src",
       "dev": "nodemon src",
