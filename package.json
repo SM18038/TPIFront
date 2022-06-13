@@ -1,9 +1,33 @@
 {
-    "name": "typescript",
-    "version": "0.0.0",
-    "private": true,
+    "name": "practica1",
+    "version": "1.0.0",
+    "description": "Prueba Pipeline Front",
+    "main": "index.js",
+    "scripts": {
+      "start": "node src",
+      "dev": "nodemon src",
+      "test": "mocha --recursive ./test"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/SM18038/TPIFront.git"
+    },
+    "keywords": [],
+    "author": "Adrian Sandoval",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/SM18038/TPIFront/issues"
+    },
+    "homepage": "https://github.com/SM18038/TPIFront#readme",
     "dependencies": {
-        "lit-element": "^2.4.0",
-        "webcomponents-loader": "^1.0.1"
+      "babel-install": "^2.1.0",
+      "ejs": "^3.1.5",
+      "express": "^4.17.1",
+      "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+      "chai": "^4.2.0",
+      "mocha": "^8.2.1",
+      "nodemon": "^2.0.6"
     }
-}
+  }
